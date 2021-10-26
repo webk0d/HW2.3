@@ -78,20 +78,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         }
         return false
     }
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
-//        welcomeViewController.userNameLoginVC = UserNameTF.text
-//    }
-//
-//
-//    @IBAction func unwind(for segue: UIStoryboardSegue) {
-//        guard let welcomeViewController = segue.source as? WelcomeViewController else { return }
-//        UserNameTF.text = welcomeViewController.clearTF
-//        PasswordTF.text = welcomeViewController.clearTF
-//    }
 
 
 }
