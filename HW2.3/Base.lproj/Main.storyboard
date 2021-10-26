@@ -43,6 +43,10 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log in">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Mz-BZ-07p"/>
+                                    <segue destination="JL5-dd-E6Z" kind="presentation" id="Uj6-X8-veN"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FBR-yj-2Nm">
                                 <rect key="frame" x="20" y="319" width="374" height="28.5"/>
@@ -53,6 +57,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                             <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotUserName" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ma-vu-TcY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-z8-cec">
                                         <rect key="frame" x="194.5" y="0.0" width="179.5" height="28.5"/>
@@ -60,6 +67,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpM-yM-gIl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -77,6 +87,10 @@
                             <constraint firstItem="Rce-jC-0uL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gfv-Q3-sk7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PasswordTF" destination="Bll-vS-I1j" id="0Nk-HT-Paf"/>
+                        <outlet property="UserNameTF" destination="96F-Jf-35V" id="g7V-Dk-TBb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,22 +101,25 @@
             <objects>
                 <viewController id="JL5-dd-E6Z" customClass="WelcomeViewController" customModule="HW2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2GT-KV-Di7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAp-1j-inM">
-                                <rect key="frame" x="98" y="184" width="218" height="36"/>
+                                <rect key="frame" x="98" y="140" width="218" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5g-eV-D4Z">
-                                <rect key="frame" x="154" y="768" width="106" height="44"/>
+                                <rect key="frame" x="154" y="714" width="106" height="44"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButton" destination="JL5-dd-E6Z" eventType="touchUpInside" id="GgR-DO-MI0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L6D-aZ-ed0"/>
@@ -114,6 +131,9 @@
                             <constraint firstItem="hAp-1j-inM" firstAttribute="top" secondItem="L6D-aZ-ed0" secondAttribute="top" constant="140" id="sZ8-CJ-cwj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="WelcomeLabel" destination="hAp-1j-inM" id="Vaa-Sm-PRY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lb-OT-0zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

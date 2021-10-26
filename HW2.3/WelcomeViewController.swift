@@ -9,9 +9,19 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var WelcomeLabel: UILabel!
+    
+    var userNameLoginVC: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        WelcomeLabel.text =  "Welcome, " + userNameLoginVC
 
     }
+    
+    @IBAction func logoutButton() {
+        dismiss(animated: true)
+    }
+    
     
 }
