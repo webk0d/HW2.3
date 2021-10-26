@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     }
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case UserNameTF:
             PasswordTF.becomeFirstResponder()
