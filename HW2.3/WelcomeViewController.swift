@@ -10,7 +10,6 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var WelcomeLabel: UILabel!
-    let clearTF = ""
     
     
     var userNameLoginVC: String!
