@@ -45,6 +45,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Mz-BZ-07p"/>
+                                    <segue destination="JL5-dd-E6Z" kind="presentation" identifier="toWelcomeScreen" id="D8Z-Op-MMe"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FBR-yj-2Nm">
@@ -100,17 +101,17 @@
             <objects>
                 <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JL5-dd-E6Z" customClass="WelcomeViewController" customModule="HW2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2GT-KV-Di7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAp-1j-inM">
-                                <rect key="frame" x="98" y="184" width="218" height="36"/>
+                                <rect key="frame" x="98" y="140" width="218" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5g-eV-D4Z">
-                                <rect key="frame" x="154" y="768" width="106" height="44"/>
+                                <rect key="frame" x="154" y="714" width="106" height="44"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
@@ -118,6 +119,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logoutButton" destination="JL5-dd-E6Z" eventType="touchUpInside" id="GgR-DO-MI0"/>
+                                    <segue destination="16y-6Q-Sxn" kind="unwind" unwindAction="unwindFor:" id="WUF-NC-cBO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,6 +137,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lb-OT-0zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="16y-6Q-Sxn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="93.75"/>
         </scene>

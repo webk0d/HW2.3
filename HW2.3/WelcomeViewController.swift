@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     
     
     var userNameLoginVC: String!
+    let clearTF = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func logoutButton() {
         dismiss(animated: true)
+        
     }
     
     

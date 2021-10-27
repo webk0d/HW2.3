@@ -26,7 +26,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     @IBAction func loginButton() {
     
         if (UserNameTF.text == userName && PasswordTF.text == userPassword ) {
-            loginUserShowWelcome()
+            performSegue(withIdentifier: "toWelcomeScreen", sender: UIButton.self)
         } else if UserNameTF.text == userName {
             showText(title: "Invalid login or password", message: "Please, enter correct login and password")
             PasswordTF.text = ""
@@ -53,15 +53,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     }
     
     
-    private func loginUserShowWelcome() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let welcomeViewController = storyboard.instantiateViewController(identifier: "WelcomeViewController") as? WelcomeViewController else { return }
-        welcomeViewController.userNameLoginVC = UserNameTF.text
-        show(welcomeViewController, sender: nil)
-        UserNameTF.text = ""
-        PasswordTF.text = ""
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             view.endEditing(true)
         super .touchesBegan(touches, with: event)
@@ -78,6 +69,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         }
         return false
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
+        welcomeViewController.userNameLoginVC = UserNameTF.text
+    }
+
+
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let welcomeViewController = segue.source as? WelcomeViewController else { return }
+        UserNameTF.text = welcomeViewController.clearTF
+        PasswordTF.text = welcomeViewController.clearTF
+    }
+    
 
 
 }
